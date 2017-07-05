@@ -1,0 +1,10 @@
+orchestrator : root;
+orchestrator/nodes : root/macTable;
+orchestrator/nodes[] : root/macTable[{key}];
+orchestrator/nodes[]/id : root/macTable[{key}]/{key};
+orchestrator/nodes[]/ip : root/macTable[{key}]/{value}/ip;
+orchestrator/nodes[]/mac : root/macTable[{key}]/{value}/mac;
+orchestrator/throughput : root/throughput_per_switch;
+orchestrator/throughput[] : root/throughput_per_switch[{key}];
+orchestrator/throughput[]/id : root/throughput_per_switch[{key}]/{key};
+orchestrator/throughput[]/tp : root/throughput_per_switch[{key}]/{value};

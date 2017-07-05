@@ -1,0 +1,58 @@
+module orchestrator{
+  namespace "urn:sssa:orchestrator";
+  prefix "orchestrator";
+
+  extension advertise{
+        argument advertise{
+            yin-element false;
+        }
+    }
+
+    extension period{
+        argument period{
+            yin-element false;
+        }
+    }
+
+    extension minthreshold{
+        argument minthreshold{
+            yin-element false;
+        }
+    }
+
+    extension maxthreshold{
+        argument maxthreshold{
+            yin-element false;
+        }
+    }
+
+  list nodes{
+    key id;
+    leaf id{
+      type string;
+      orchestrator:advertise onchange;
+    }
+    leaf ip{
+      type string;
+      orchestrator:advertise onchange;
+    }
+    leaf mac{
+      type string;
+      orchestrator:advertise onchange;
+    }
+  }
+
+  list throughput{
+    key id;
+    leaf id{
+      type string;
+      orchestrator:advertise periodic;
+      orchestrator:period 5000;
+    }
+    leaf tp{
+      type double;
+      orchestrator:advertise periodic;
+      orchestrator:period 5000; 
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "@xmlns": "urn:ietf:params:xml:ns:yang:yin:1",
+  "@name": "orchestrator",
+  "extension": [
+    {
+      "@name": "advertise",
+      "argument": {
+        "yin-element": {
+          "@value": "false"
+        },
+        "@name": "advertise"
+      }
+    },
+    {
+      "@name": "period",
+      "argument": {
+        "yin-element": {
+          "@value": "false"
+        },
+        "@name": "period"
+      }
+    },
+    {
+      "@name": "minthreshold",
+      "argument": {
+        "yin-element": {
+          "@value": "false"
+        },
+        "@name": "minthreshold"
+      }
+    },
+    {
+      "@name": "maxthreshold",
+      "argument": {
+        "yin-element": {
+          "@value": "false"
+        },
+        "@name": "maxthreshold"
+      }
+    }
+  ],
+  "list": [
+    {
+      "leaf": [
+        {
+          "type": {
+            "@name": "string"
+          },
+          "orchestrator:advertise": {
+            "@advertise": "onchange"
+          },
+          "@name": "id"
+        },
+        {
+          "type": {
+            "@name": "string"
+          },
+          "orchestrator:advertise": {
+            "@advertise": "onchange"
+          },
+          "@name": "ip"
+        },
+        {
+          "type": {
+            "@name": "string"
+          },
+          "orchestrator:advertise": {
+            "@advertise": "onchange"
+          },
+          "@name": "mac"
+        }
+      ],
+      "@name": "nodes",
+      "key": {
+        "@value": "id"
+      }
+    },
+    {
+      "leaf": [
+        {
+          "type": {
+            "@name": "string"
+          },
+          "orchestrator:advertise": {
+            "@advertise": "periodic"
+          },
+          "@name": "id",
+          "orchestrator:period": {
+            "@period": "5000"
+          }
+        },
+        {
+          "type": {
+            "@name": "double"
+          },
+          "orchestrator:advertise": {
+            "@advertise": "periodic"
+          },
+          "@name": "tp",
+          "orchestrator:period": {
+            "@period": "5000"
+          }
+        }
+      ],
+      "@name": "throughput",
+      "key": {
+        "@value": "id"
+      }
+    }
+  ],
+  "namespace": {
+    "@uri": "urn:sssa:orchestrator"
+  },
+  "prefix": {
+    "@value": "orchestrator"
+  },
+  "@xmlns:orchestrator": "urn:sssa:orchestrator"
+}
