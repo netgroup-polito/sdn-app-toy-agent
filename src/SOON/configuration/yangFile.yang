@@ -46,13 +46,11 @@ module orchestrator{
     key id;
     leaf id{
       type string;
-      orchestrator:advertise periodic;
-      orchestrator:period 5000;
     }
     leaf tp{
       type double;
-      orchestrator:advertise periodic;
-      orchestrator:period 5000; 
+      orchestrator:advertise onthreshold;
+      orchestrator:minthreshold 500; 
     }
   }
 }

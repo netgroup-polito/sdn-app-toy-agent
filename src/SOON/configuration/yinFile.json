@@ -81,24 +81,18 @@
           "type": {
             "@name": "string"
           },
-          "orchestrator:advertise": {
-            "@advertise": "periodic"
-          },
-          "@name": "id",
-          "orchestrator:period": {
-            "@period": "5000"
-          }
+          "@name": "id"
         },
         {
           "type": {
             "@name": "double"
           },
           "orchestrator:advertise": {
-            "@advertise": "periodic"
+            "@advertise": "onthreshold"
           },
           "@name": "tp",
-          "orchestrator:period": {
-            "@period": "5000"
+          "orchestrator:minthreshold": {
+            "@minthreshold": "500"
           }
         }
       ],
