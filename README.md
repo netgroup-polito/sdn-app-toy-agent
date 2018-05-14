@@ -1,2 +1,3 @@
-# state-listener-sssa
-State Listener and utility files for the SSSA Orchestrator. The SSSA Orchestrator is not included.
+# SND Application ToY Agent
+
+This repository keeps the ToY Agent module that allows reading and writing state of SDN applications from higher level services.
