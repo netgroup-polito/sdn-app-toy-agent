@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="results-redirection">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/results/results-redirection/new2.zip!/" />
+      <root url="jar://$PROJECT_DIR$/results/results-redirection/results-Tuesday.zip!/" />
+      <root url="jar://$PROJECT_DIR$/results/results-redirection/new.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

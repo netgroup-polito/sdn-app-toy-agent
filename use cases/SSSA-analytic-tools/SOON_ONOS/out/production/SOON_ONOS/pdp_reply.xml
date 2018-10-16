@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PDP_rep>
+  <domain_id>1</domain_id>
+  <req_id>1</req_id>
+  <out>
+    <permit>0</permit>
+    <temp_deny>0</temp_deny>
+    <crit_deny>0</crit_deny>
+    <warning>0</warning>
+  </out>
+  <force_close>0</force_close>
+</PDP_rep>

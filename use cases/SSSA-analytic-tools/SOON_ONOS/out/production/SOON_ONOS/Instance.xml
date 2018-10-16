@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Instances address="10.30.2.20" port="5050">
+<host type="client">
+<instance ip="" MAC="" port=""/>
+</host>
+<host type="server">
+<instance ip="" MAC="" port=""/>
+</host>
+<host type="F">
+<instance ip="" MAC="" port=""/>
+</host>
+<host type="D">
+<instance ip="" MAC="" port=""/>
+</host>
+</Instances>
+

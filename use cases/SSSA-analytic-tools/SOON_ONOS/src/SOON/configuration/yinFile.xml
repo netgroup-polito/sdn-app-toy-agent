@@ -1,0 +1,1499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="orchestrator"
+        xmlns="urn:ietf:params:xml:ns:yang:yin:1"
+        xmlns:orchestrator="urn:sssa:orchestrator">
+  <namespace uri="urn:sssa:orchestrator"/>
+  <prefix value="orchestrator"/>
+  <extension name="advertise">
+    <argument name="advertise">
+      <yin-element value="false"/>
+    </argument>
+  </extension>
+  <extension name="period">
+    <argument name="period">
+      <yin-element value="false"/>
+    </argument>
+  </extension>
+  <extension name="minthreshold">
+    <argument name="minthreshold">
+      <yin-element value="false"/>
+    </argument>
+  </extension>
+  <extension name="maxthreshold">
+    <argument name="maxthreshold">
+      <yin-element value="false"/>
+    </argument>
+  </extension>
+  <list name="switches">
+    <key value="id"/>
+    <leaf name="id">
+      <type name="string"/>
+      <orchestrator:advertise advertise="onchange"/>
+    </leaf>
+    <leaf name="ip">
+      <type name="string"/>
+      <orchestrator:advertise advertise="onchange"/>
+    </leaf>
+    <leaf name="mac">
+      <type name="string"/>
+      <orchestrator:advertise advertise="onchange"/>
+    </leaf>
+  </list>
+  <list name="load">
+    <key value="id"/>
+    <leaf name="id">
+      <type name="string"/>
+    </leaf>
+    <leaf name="tp">
+      <type name="decimal64">
+        <fraction-digits value="1"/>
+      </type>
+      <orchestrator:advertise advertise="onthreshold"/>
+      <orchestrator:minthreshold minthreshold="500"/>
+    </leaf>
+  </list>
+  <container name="a">
+    <leaf name="l1">
+      <type name="int32"/>
+      <orchestrator:advertise advertise="onchange"/>
+    </leaf>
+    <leaf name="l2">
+      <type name="string"/>
+      <orchestrator:advertise advertise="onchange"/>
+    </leaf>
+    <container name="b">
+      <leaf name="l1">
+        <type name="int32"/>
+        <orchestrator:advertise advertise="onchange"/>
+      </leaf>
+      <leaf name="l2">
+        <type name="string"/>
+        <orchestrator:advertise advertise="onchange"/>
+      </leaf>
+      <container name="c">
+        <leaf name="l1">
+          <type name="int32"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l2">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l3">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+      </container>
+      <list name="l">
+        <key value="l1"/>
+        <leaf name="l1">
+          <type name="int32"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l2">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <container name="b">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="c">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l3">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="a">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="b">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <list name="l">
+                  <key value="l1"/>
+                  <leaf name="l1">
+                    <type name="int32"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                  <leaf name="l2">
+                    <type name="string"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                </list>
+              </container>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+          <list name="l">
+            <key value="l1"/>
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="b">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <list name="l">
+                <key value="l1"/>
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </list>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </list>
+        </container>
+        <container name="c">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l3">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="a">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="b">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <list name="l">
+                <key value="l1"/>
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </list>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+        </container>
+      </list>
+    </container>
+    <container name="c">
+      <leaf name="l1">
+        <type name="int32"/>
+        <orchestrator:advertise advertise="onchange"/>
+      </leaf>
+      <leaf name="l2">
+        <type name="string"/>
+        <orchestrator:advertise advertise="onchange"/>
+      </leaf>
+      <leaf name="l3">
+        <type name="string"/>
+        <orchestrator:advertise advertise="onchange"/>
+      </leaf>
+      <container name="a">
+        <leaf name="l1">
+          <type name="int32"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l2">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <container name="b">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="c">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l3">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="a">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="b">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <list name="l">
+                  <key value="l1"/>
+                  <leaf name="l1">
+                    <type name="int32"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                  <leaf name="l2">
+                    <type name="string"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                </list>
+              </container>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+          <list name="l">
+            <key value="l1"/>
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="b">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <container name="a">
+                  <leaf name="l1">
+                    <type name="int32"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                  <leaf name="l2">
+                    <type name="string"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                </container>
+              </container>
+              <list name="l">
+                <key value="l1"/>
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <container name="c">
+                  <leaf name="l1">
+                    <type name="int32"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                  <leaf name="l2">
+                    <type name="string"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                  <leaf name="l3">
+                    <type name="string"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                </container>
+              </list>
+            </container>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </list>
+        </container>
+        <container name="c">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l3">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="a">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="b">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <list name="l">
+                <key value="l1"/>
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </list>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+        </container>
+      </container>
+      <container name="c">
+        <leaf name="l1">
+          <type name="int32"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l2">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l3">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <container name="a">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="b">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <list name="l">
+              <key value="l1"/>
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+            </list>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+          <container name="c">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l3">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="a">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="b">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <list name="l">
+                  <key value="l1"/>
+                  <leaf name="l1">
+                    <type name="int32"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                  <leaf name="l2">
+                    <type name="string"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                </list>
+              </container>
+            </container>
+          </container>
+        </container>
+        <container name="c">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l3">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="a">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="b">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <list name="l">
+                <key value="l1"/>
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </list>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+        </container>
+      </container>
+    </container>
+  </container>
+  <container name="a2">
+    <leaf name="l1">
+      <type name="int32"/>
+      <orchestrator:advertise advertise="onchange"/>
+    </leaf>
+    <leaf name="l2">
+      <type name="string"/>
+      <orchestrator:advertise advertise="onchange"/>
+    </leaf>
+    <container name="b">
+      <leaf name="l1">
+        <type name="int32"/>
+        <orchestrator:advertise advertise="onchange"/>
+      </leaf>
+      <leaf name="l2">
+        <type name="string"/>
+        <orchestrator:advertise advertise="onchange"/>
+      </leaf>
+      <container name="c">
+        <leaf name="l1">
+          <type name="int32"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l2">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l3">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+      </container>
+      <list name="l">
+        <key value="l1"/>
+        <leaf name="l1">
+          <type name="int32"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l2">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <container name="b">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="c">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l3">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="a">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="b">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <list name="l">
+                  <key value="l1"/>
+                  <leaf name="l1">
+                    <type name="int32"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                  <leaf name="l2">
+                    <type name="string"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                </list>
+              </container>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+          <list name="l">
+            <key value="l1"/>
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="b">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <list name="l">
+                <key value="l1"/>
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </list>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </list>
+        </container>
+        <container name="c">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l3">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="a">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="b">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <list name="l">
+                <key value="l1"/>
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </list>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+        </container>
+      </list>
+    </container>
+    <container name="c">
+      <leaf name="l1">
+        <type name="int32"/>
+        <orchestrator:advertise advertise="onchange"/>
+      </leaf>
+      <leaf name="l2">
+        <type name="string"/>
+        <orchestrator:advertise advertise="onchange"/>
+      </leaf>
+      <leaf name="l3">
+        <type name="string"/>
+        <orchestrator:advertise advertise="onchange"/>
+      </leaf>
+      <container name="a">
+        <leaf name="l1">
+          <type name="int32"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l2">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <container name="b">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="c">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l3">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="a">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="b">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <list name="l">
+                  <key value="l1"/>
+                  <leaf name="l1">
+                    <type name="int32"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                  <leaf name="l2">
+                    <type name="string"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                </list>
+              </container>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+          <list name="l">
+            <key value="l1"/>
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="b">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <list name="l">
+                <key value="l1"/>
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <container name="c">
+                  <leaf name="l1">
+                    <type name="int32"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                  <leaf name="l2">
+                    <type name="string"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                  <leaf name="l3">
+                    <type name="string"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                </container>
+              </list>
+            </container>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </list>
+        </container>
+        <container name="c">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l3">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="a">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="b">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <list name="l">
+                <key value="l1"/>
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </list>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+        </container>
+      </container>
+      <container name="c">
+        <leaf name="l1">
+          <type name="int32"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l2">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <leaf name="l3">
+          <type name="string"/>
+          <orchestrator:advertise advertise="onchange"/>
+        </leaf>
+        <container name="a">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="b">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <list name="l">
+              <key value="l1"/>
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+            </list>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+          <container name="c">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l3">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="a">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="b">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <list name="l">
+                  <key value="l1"/>
+                  <leaf name="l1">
+                    <type name="int32"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                  <leaf name="l2">
+                    <type name="string"/>
+                    <orchestrator:advertise advertise="onchange"/>
+                  </leaf>
+                </list>
+              </container>
+            </container>
+          </container>
+        </container>
+        <container name="c">
+          <leaf name="l1">
+            <type name="int32"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l2">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <leaf name="l3">
+            <type name="string"/>
+            <orchestrator:advertise advertise="onchange"/>
+          </leaf>
+          <container name="a">
+            <leaf name="l1">
+              <type name="int32"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <leaf name="l2">
+              <type name="string"/>
+              <orchestrator:advertise advertise="onchange"/>
+            </leaf>
+            <container name="b">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <list name="l">
+                <key value="l1"/>
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </list>
+              <container name="c">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l3">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+            <container name="c">
+              <leaf name="l1">
+                <type name="int32"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l2">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <leaf name="l3">
+                <type name="string"/>
+                <orchestrator:advertise advertise="onchange"/>
+              </leaf>
+              <container name="a">
+                <leaf name="l1">
+                  <type name="int32"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+                <leaf name="l2">
+                  <type name="string"/>
+                  <orchestrator:advertise advertise="onchange"/>
+                </leaf>
+              </container>
+            </container>
+          </container>
+        </container>
+      </container>
+    </container>
+  </container>
+</module>

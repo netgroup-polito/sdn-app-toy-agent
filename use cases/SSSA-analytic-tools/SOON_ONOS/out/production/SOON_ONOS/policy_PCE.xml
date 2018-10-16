@@ -1,0 +1,581 @@
+<PolicySet PolicySetId="PolicySetForMalicious_PCE" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:first-applicable">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<AnyAction />
+</Actions>
+</Target>
+
+<Policy PolicyId="Policy1" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<AnyAction />
+</Actions>
+</Target>
+<Rule RuleId="Send_PCRep" Effect="Permit">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<Action>
+<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">compute</AttributeValue>
+<ActionAttributeDesignator DataType="http://www.w3.org/2001/XMLSchema#string" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" />
+</ActionMatch>
+</Action>
+</Actions>
+</Target>
+<Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">500</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">10</AttributeValue>
+</Apply>
+</Condition>
+</Rule>
+<Obligations>
+<Obligation ObligationId="Send_PCRep" FulfillOn="Permit">
+<AttributeAssignment AttributeId="urn:oasis:names:tc:xacml:1.0:APS_Outcome" DataType="http://www.w3.org/2001/XMLSchema#string">Send_PCRep</AttributeAssignment>
+</Obligation>
+</Obligations>
+</Policy>
+
+<Policy PolicyId="Policy2" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<AnyAction />
+</Actions>
+</Target>
+<Rule RuleId="Send_Close" Effect="Permit">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<Action>
+<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">compute</AttributeValue>
+<ActionAttributeDesignator DataType="http://www.w3.org/2001/XMLSchema#string" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" />
+</ActionMatch>
+</Action>
+</Actions>
+</Target>
+<Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1000</AttributeValue>
+</Apply>	
+</Condition>
+</Rule>
+<Obligations>
+<Obligation ObligationId="Send_Close" FulfillOn="Permit">
+<AttributeAssignment AttributeId="urn:oasis:names:tc:xacml:1.0:APS_Outcome" DataType="http://www.w3.org/2001/XMLSchema#string">Send_Close</AttributeAssignment>
+</Obligation>
+</Obligations>
+</Policy>
+
+<Policy PolicyId="Policy3" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<AnyAction />
+</Actions>
+</Target>
+<Rule RuleId="Send_TCVE" Effect="Permit">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<Action>
+<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">compute</AttributeValue>
+<ActionAttributeDesignator DataType="http://www.w3.org/2001/XMLSchema#string" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" />
+</ActionMatch>
+</Action>
+</Actions>
+</Target>
+<Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">500</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">10</AttributeValue>
+</Apply>	
+</Condition>
+</Rule>
+<Obligations>
+<Obligation ObligationId="Send_TCVE" FulfillOn="Permit">
+<AttributeAssignment AttributeId="urn:oasis:names:tc:xacml:1.0:APS_Outcome" DataType="http://www.w3.org/2001/XMLSchema#string">Send_TCVE</AttributeAssignment>
+</Obligation>
+</Obligations>
+</Policy>
+
+<Policy PolicyId="Policy4" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<AnyAction />
+</Actions>
+</Target>
+<Rule RuleId="Send_PCRep" Effect="Permit">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<Action>
+<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">compute</AttributeValue>
+<ActionAttributeDesignator DataType="http://www.w3.org/2001/XMLSchema#string" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" />
+</ActionMatch>
+</Action>
+</Actions>
+</Target>
+<Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">500</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">750</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">300</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:rk" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:rk" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1000</AttributeValue>
+</Apply>
+</Condition>
+</Rule>
+<Obligations>
+<Obligation ObligationId="Send_PCRep" FulfillOn="Permit">
+<AttributeAssignment AttributeId="urn:oasis:names:tc:xacml:1.0:APS_Outcome" DataType="http://www.w3.org/2001/XMLSchema#string">Send_PCRep</AttributeAssignment>
+</Obligation>
+</Obligations>
+</Policy>
+
+<Policy PolicyId="Policy5" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<AnyAction />
+</Actions>
+</Target>
+<Rule RuleId="Send_CVE" Effect="Permit">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<Action>
+<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">compute</AttributeValue>
+<ActionAttributeDesignator DataType="http://www.w3.org/2001/XMLSchema#string" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" />
+</ActionMatch>
+</Action>
+</Actions>
+</Target>
+<Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">500</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">750</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">300</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:rk" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1000</AttributeValue>
+</Apply>	
+</Condition>
+</Rule>
+<Obligations>
+<Obligation ObligationId="Send_CVE" FulfillOn="Permit">
+<AttributeAssignment AttributeId="urn:oasis:names:tc:xacml:1.0:APS_Outcome" DataType="http://www.w3.org/2001/XMLSchema#string">Send_CVE</AttributeAssignment>
+</Obligation>
+</Obligations>
+</Policy>
+
+<Policy PolicyId="Policy6" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<AnyAction />
+</Actions>
+</Target>
+<Rule RuleId="Send_TCVE" Effect="Permit">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<Action>
+<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">compute</AttributeValue>
+<ActionAttributeDesignator DataType="http://www.w3.org/2001/XMLSchema#string" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" />
+</ActionMatch>
+</Action>
+</Actions>
+</Target>
+<Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">500</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">750</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">300</AttributeValue>
+</Apply>	
+</Condition>
+</Rule>
+<Obligations>
+<Obligation ObligationId="Send_TCVE" FulfillOn="Permit">
+<AttributeAssignment AttributeId="urn:oasis:names:tc:xacml:1.0:APS_Outcome" DataType="http://www.w3.org/2001/XMLSchema#string">Send_TCVE</AttributeAssignment>
+</Obligation>
+</Obligations>
+</Policy>
+
+<Policy PolicyId="Policy7" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<AnyAction />
+</Actions>
+</Target>
+<Rule RuleId="Send_PCRep_PCNtf" Effect="Permit">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<Action>
+<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">compute</AttributeValue>
+<ActionAttributeDesignator DataType="http://www.w3.org/2001/XMLSchema#string" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" />
+</ActionMatch>
+</Action>
+</Actions>
+</Target>
+<Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">750</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1000</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">200</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:rk" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:rk" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">500</AttributeValue>
+</Apply>
+</Condition>
+</Rule>
+<Obligations>
+<Obligation ObligationId="Send_PCRep_PCNtf" FulfillOn="Permit">
+<AttributeAssignment AttributeId="urn:oasis:names:tc:xacml:1.0:APS_Outcome" DataType="http://www.w3.org/2001/XMLSchema#string">Send_PCRep_PCNtf</AttributeAssignment>
+</Obligation>
+</Obligations>
+</Policy>
+
+<Policy PolicyId="Policy8" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<AnyAction />
+</Actions>
+</Target>
+<Rule RuleId="Send_CVE_PCNtf" Effect="Permit">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<Action>
+<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">compute</AttributeValue>
+<ActionAttributeDesignator DataType="http://www.w3.org/2001/XMLSchema#string" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" />
+</ActionMatch>
+</Action>
+</Actions>
+</Target>
+<Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">750</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1000</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">200</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:rk" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">500</AttributeValue>
+</Apply>	
+</Condition>
+</Rule>
+<Obligations>
+<Obligation ObligationId="Send_CVE_PCNtf" FulfillOn="Permit">
+<AttributeAssignment AttributeId="urn:oasis:names:tc:xacml:1.0:APS_Outcome" DataType="http://www.w3.org/2001/XMLSchema#string">Send_CVE_PCNtf</AttributeAssignment>
+</Obligation>
+</Obligations>
+</Policy>
+
+<Policy PolicyId="Policy9" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<AnyAction />
+</Actions>
+</Target>
+<Rule RuleId="Send_TCVE_PCNtf" Effect="Permit">
+<Target>
+<Subjects>
+<AnySubject />
+</Subjects>
+<Resources>
+<AnyResource />
+</Resources>
+<Actions>
+<Action>
+<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">compute</AttributeValue>
+<ActionAttributeDesignator DataType="http://www.w3.org/2001/XMLSchema#string" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" />
+</ActionMatch>
+</Action>
+</Actions>
+</Target>
+<Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">750</AttributeValue>
+</Apply>	
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1000</AttributeValue>
+</Apply>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer"/>
+</Apply>
+<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">200</AttributeValue>
+</Apply>	
+</Condition>
+</Rule>
+<Obligations>
+<Obligation ObligationId="Send_TCVE_PCNtf" FulfillOn="Permit">
+<AttributeAssignment AttributeId="urn:oasis:names:tc:xacml:1.0:APS_Outcome" DataType="http://www.w3.org/2001/XMLSchema#string">Send_TCVE_PCNtf</AttributeAssignment>
+</Obligation>
+</Obligations>
+</Policy>
+
+</PolicySet>

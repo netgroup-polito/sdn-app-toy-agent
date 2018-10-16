@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DSE address="10.30.2.20" port="5050">
+<PE address="10.0.10.1">
+<interface address="fe-1/11/1">
+<Subnet address="10.20.50.2/30"/>
+</interface>
+<interface address="fe-1/11/2">
+<Subnet address="10.20.80.12/30"/>
+<Subnet address="10.20.100.0/24"/>
+</interface>
+</PE>
+</DSE>

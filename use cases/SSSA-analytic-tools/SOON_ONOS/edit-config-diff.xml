@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<virtualizer>
+	<nodes>
+		<node>
+			<id>SingleBiSBiS</id>
+			<flowtable>
+				<flowentry operation="create">
+					<id>ESCAPE-flowentrysg1</id>
+					<name>sg_hop:sg1</name>
+					<priority>100</priority>
+					<port>../../../ports/port[id=port-SAP1]</port>
+					<out>../../../ports/port[id=port-SAP2]</out>
+					<resources>
+						<bandwidth>1000.0</bandwidth>
+					</resources>
+				</flowentry>
+				<flowentry operation="create">
+					<id>ESCAPE-flowentrysg2</id>
+					<name>sg_hop:sg2</name>
+					<priority>100</priority>
+					<port>../../../ports/port[id=port-SAP2]</port>
+					<out>../../../ports/port[id=port-SAP1]</out>
+					<resources>
+						<bandwidth>1000.0</bandwidth>
+					</resources>
+				</flowentry>
+			</flowtable>
+		</node>
+	</nodes>
+	<version>2016-06-20</version>
+</virtualizer>

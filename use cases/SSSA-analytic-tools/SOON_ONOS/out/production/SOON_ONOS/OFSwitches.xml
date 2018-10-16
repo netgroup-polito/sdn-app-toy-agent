@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Switches>
+<Switch id="1" of="of:0000000000000001"/>
+<Switch id="2" of="of:0000000000000002"/>
+<Switch id="3" of="of:0000000000000003"/>
+<Switch id="4" of="of:0000000000000004"/>
+<Switch id="5" of="of:0000000000000005"/>
+<Switch id="6" of="of:0000000000000006"/>
+<Switch id="7" of="of:0000000000000007"/>
+<Switch id="8" of="of:0000000000000008"/>
+<Switch id="9" of="of:0000000000000009"/>
+<Switch id="10" of="of:000000000000000a"/>
+<Switch id="11" of="of:000000000000000b"/>
+<Switch id="12" of="of:000000000000000c"/>
+</Switches>

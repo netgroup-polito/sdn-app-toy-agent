@@ -1,0 +1,45 @@
+*********************
+ BNServer and NRDB
+*********************
+BNSname=127.0.0.1
+BNServerPort=4445
+dseHostName=127.0.0.1
+dsePort=4747
+deviceAddress=217.9.70.112
+devicePort=3221
+deviceLoopback=10.0.0.1
+HelloTime=10000
+NetworksTableTime=5000
+//used also for refreshing NRDB database
+loop=no
+TimerLogin=600
+//0.6sec., 0.3 is sufficient
+*********************
+       DSE
+*********************
+hostname=127.0.0.1
+AEPort=4048
+BNSPort=4747
+BNSTimeout=100000
+DSEPort=5050
+DSETimeout=200000
+CSEPort=4689
+CSEtimeout=150000
+CSELSPtimeout=19000000
+FLPort=5555
+GUI=yes
+*********************
+       CSE
+*********************
+CSEHost=127.0.0.1
+CSEUdpPort=4446
+DBtimeout=1000000
+//DBtimeout=1000
+LSPDBtimeout=19000000
+*********************
+       AE
+*********************
+AEAddress= 127.0.0.1
+AEXmlPort=10000
+
+

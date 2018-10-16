@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SOON_ONOS1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/SOON_ONOS.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

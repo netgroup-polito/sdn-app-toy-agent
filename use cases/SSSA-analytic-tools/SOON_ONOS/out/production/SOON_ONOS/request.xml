@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ServiceRequest>
+<SCF ID-Session="test" ipaddress="010.030.002.020" name="soon-4"/>
+<Service>
+<type>Video</type>
+<quality-level>gold</quality-level>
+<clientIP>1.1.1.1</clientIP>
+<serverIP>1.1.1.1</serverIP>
+</Service>
+</ServiceRequest>

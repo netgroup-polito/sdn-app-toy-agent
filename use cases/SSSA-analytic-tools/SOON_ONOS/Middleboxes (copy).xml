@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Middleboxes>
+<Middlebox vlid="10" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="11" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="12" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="13" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="14" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="15" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="16" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="17" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="18" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="19" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="20" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="21" switch="1" port="3" outPort="4"/>
+<Middlebox vlid="22" switch="3" port="3" outPort="4"/>
+<Middlebox vlid="23" switch="3" port="3" outPort="4"/>
+<Middlebox vlid="24" switch="3" port="3" outPort="4"/>
+<Middlebox vlid="25" switch="3" port="3" outPort="4"/>
+<Middlebox vlid="26" switch="3" port="3" outPort="4"/>
+<Middlebox vlid="27" switch="3" port="3" outPort="4"/>
+<Middlebox vlid="28" switch="3" port="3" outPort="4"/>
+<Middlebox vlid="29" switch="3" port="3" outPort="4"/>
+<Middlebox vlid="30" switch="3" port="3" outPort="4"/>
+<Middlebox vlid="31" switch="3" port="3" outPort="4"/>
+<Middlebox vlid="32" switch="3" port="3" outPort="4"/>
+<Middlebox vlid="33" switch="3" port="3" outPort="4"/>
+</Middleboxes>

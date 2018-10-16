@@ -1,0 +1,1477 @@
+module orchestrator{
+	namespace "urn:sssa:orchestrator";
+	prefix "orchestrator";
+
+	extension advertise{
+		argument advertise{
+			yin-element false;
+		}
+	}
+
+	extension period{
+		argument period{
+			yin-element false;
+		}
+	}
+
+	extension minthreshold{
+		argument minthreshold{
+			yin-element false;
+		}
+	}
+
+	extension maxthreshold{
+		argument maxthreshold{
+			yin-element false;
+		}
+	}
+
+	list switches{
+		key id;
+		leaf id{
+			type string;
+			orchestrator:advertise onchange;
+		}
+		leaf ip{
+			type string;
+			orchestrator:advertise onchange;
+		}
+		leaf mac{
+			type string;
+			orchestrator:advertise onchange;
+		}
+	}
+
+	list load{
+		key id;
+		leaf id{
+			type string;
+		}
+		leaf tp{
+			type int32;
+			orchestrator:advertise onthreshold;
+			orchestrator:minthreshold 500;
+		}
+	}
+
+	container a {
+		leaf l1 {
+			type int32;
+			orchestrator:advertise onchange;
+		}
+		leaf l2 {
+			type string;
+			orchestrator:advertise onchange;
+		}
+		container b {
+			leaf l1 {
+				type int32;
+				orchestrator:advertise onchange;
+			}
+			leaf l2 {
+				type string;
+				orchestrator:advertise onchange;
+			}
+			container c {
+				leaf l1 {
+					type int32;
+					orchestrator:advertise onchange;
+				}
+				leaf l2 {
+					type string;
+					orchestrator:advertise onchange;
+				}
+				leaf l3 {
+					type string;
+					orchestrator:advertise onchange;
+				}
+			}
+			list l {
+				key l1;
+				leaf l1 {
+					type int32;
+					orchestrator:advertise onchange;
+				}
+				leaf l2 {
+					type string;
+					orchestrator:advertise onchange;
+				}
+				container b {
+                    leaf l1 {
+                        type int32;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l2 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    container c {
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l3 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container a {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container b {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                list l {
+                                    key l1;
+                                    leaf l1 {
+                                        type int32;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l2 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                    }
+                    list l {
+                        key l1;
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container b {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            list l {
+                                key l1;
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                        container c {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l3 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container a {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                    }
+                }
+				container c {
+                    leaf l1 {
+                        type int32;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l2 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l3 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    container a {
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container b {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            list l {
+                                key l1;
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                        container c {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l3 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container a {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+		}
+		container c {
+			leaf l1 {
+				type int32;
+				orchestrator:advertise onchange;
+			}
+			leaf l2 {
+				type string;
+				orchestrator:advertise onchange;
+			}
+			leaf l3 {
+				type string;
+				orchestrator:advertise onchange;
+			}
+			container a {
+				leaf l1 {
+					type int32;
+					orchestrator:advertise onchange;
+				}
+				leaf l2 {
+					type string;
+					orchestrator:advertise onchange;
+				}
+				container b {
+					leaf l1 {
+						type int32;
+						orchestrator:advertise onchange;
+					}
+					leaf l2 {
+						type string;
+						orchestrator:advertise onchange;
+					}
+					container c {
+						leaf l1 {
+							type int32;
+							orchestrator:advertise onchange;
+						}
+						leaf l2 {
+							type string;
+							orchestrator:advertise onchange;
+						}
+						leaf l3 {
+							type string;
+							orchestrator:advertise onchange;
+						}
+						container a {
+						    leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container b {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                list l {
+                                    key l1;
+                                    leaf l1 {
+                                        type int32;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l2 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+						}
+					}
+					list l {
+						key l1;
+						leaf l1 {
+							type int32;
+							orchestrator:advertise onchange;
+						}
+						leaf l2 {
+							type string;
+							orchestrator:advertise onchange;
+						}
+						container b {
+							leaf l1 {
+								type int32;
+								orchestrator:advertise onchange;
+							}
+							leaf l2 {
+								type string;
+								orchestrator:advertise onchange;
+							}
+							list l {
+								key l1;
+								leaf l1 {
+									type int32;
+									orchestrator:advertise onchange;
+								}
+								leaf l2 {
+									type string;
+									orchestrator:advertise onchange;
+								}
+								container c {
+									leaf l1 {
+										type int32;
+										orchestrator:advertise onchange;
+									}
+									leaf l2 {
+										type string;
+										orchestrator:advertise onchange;
+									}
+									leaf l3 {
+										type string;
+										orchestrator:advertise onchange;
+									}
+								}
+							}
+						}
+						container c {
+							leaf l1 {
+								type int32;
+								orchestrator:advertise onchange;
+							}
+							leaf l2 {
+								type string;
+								orchestrator:advertise onchange;
+							}
+							leaf l3 {
+								type string;
+								orchestrator:advertise onchange;
+							}
+							container a {
+								leaf l1 {
+									type int32;
+									orchestrator:advertise onchange;
+								}
+								leaf l2 {
+									type string;
+									orchestrator:advertise onchange;
+								}
+							}
+						}
+					}
+				}
+				container c {
+					leaf l1 {
+						type int32;
+						orchestrator:advertise onchange;
+					}
+					leaf l2 {
+						type string;
+						orchestrator:advertise onchange;
+					}
+					leaf l3 {
+						type string;
+						orchestrator:advertise onchange;
+					}
+					container a {
+						leaf l1 {
+							type int32;
+							orchestrator:advertise onchange;
+						}
+						leaf l2 {
+							type string;
+							orchestrator:advertise onchange;
+						}
+						container b {
+						    leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            list l {
+                                key l1;
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+						}
+						container c {
+						    leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l3 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container a {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+						}
+					}
+				}
+			}
+			container c {
+			    leaf l1 {
+                    type int32;
+                    orchestrator:advertise onchange;
+                }
+                leaf l2 {
+                    type string;
+                    orchestrator:advertise onchange;
+                }
+                leaf l3 {
+                    type string;
+                    orchestrator:advertise onchange;
+                }
+			    container a {
+                    leaf l1 {
+                        type int32;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l2 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    container b {
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        list l {
+                            key l1;
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                        }
+                        container c {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l3 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container a {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                    }
+                    container c {
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l3 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container a {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container b {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                list l {
+                                    key l1;
+                                    leaf l1 {
+                                        type int32;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l2 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                container c {
+                    leaf l1 {
+                        type int32;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l2 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l3 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    container a {
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container b {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            list l {
+                                key l1;
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                        container c {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l3 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container a {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+		}
+	}
+	container a2 {
+        leaf l1 {
+            type int32;
+            orchestrator:advertise onchange;
+        }
+        leaf l2 {
+            type string;
+            orchestrator:advertise onchange;
+        }
+        container b {
+            leaf l1 {
+                type int32;
+                orchestrator:advertise onchange;
+            }
+            leaf l2 {
+                type string;
+                orchestrator:advertise onchange;
+            }
+            container c {
+                leaf l1 {
+                    type int32;
+                    orchestrator:advertise onchange;
+                }
+                leaf l2 {
+                    type string;
+                    orchestrator:advertise onchange;
+                }
+                leaf l3 {
+                    type string;
+                    orchestrator:advertise onchange;
+                }
+            }
+            list l {
+                key l1;
+                leaf l1 {
+                    type int32;
+                    orchestrator:advertise onchange;
+                }
+                leaf l2 {
+                    type string;
+                    orchestrator:advertise onchange;
+                }
+                container b {
+                    leaf l1 {
+                        type int32;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l2 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    container c {
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l3 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container a {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container b {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                list l {
+                                    key l1;
+                                    leaf l1 {
+                                        type int32;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l2 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                    }
+                    list l {
+                        key l1;
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container b {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            list l {
+                                key l1;
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                        container c {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l3 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container a {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                    }
+                }
+                container c {
+                    leaf l1 {
+                        type int32;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l2 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l3 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    container a {
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container b {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            list l {
+                                key l1;
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                        container c {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l3 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container a {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        container c {
+            leaf l1 {
+                type int32;
+                orchestrator:advertise onchange;
+            }
+            leaf l2 {
+                type string;
+                orchestrator:advertise onchange;
+            }
+            leaf l3 {
+                type string;
+                orchestrator:advertise onchange;
+            }
+            container a {
+                leaf l1 {
+                    type int32;
+                    orchestrator:advertise onchange;
+                }
+                leaf l2 {
+                    type string;
+                    orchestrator:advertise onchange;
+                }
+                container b {
+                    leaf l1 {
+                        type int32;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l2 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    container c {
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l3 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container a {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container b {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                list l {
+                                    key l1;
+                                    leaf l1 {
+                                        type int32;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l2 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                    }
+                    list l {
+                        key l1;
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container b {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            list l {
+                                key l1;
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                container c {
+                                    leaf l1 {
+                                        type int32;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l2 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l3 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                }
+                            }
+                        }
+                        container c {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l3 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container a {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                    }
+                }
+                container c {
+                    leaf l1 {
+                        type int32;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l2 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    leaf l3 {
+                        type string;
+                        orchestrator:advertise onchange;
+                    }
+                    container a {
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container b {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            list l {
+                                key l1;
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                        container c {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l3 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container a {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            container c {
+                leaf l1 {
+                    type int32;
+                    orchestrator:advertise onchange;
+                }
+                leaf l2 {
+                    type string;
+                    orchestrator:advertise onchange;
+                }
+                leaf l3 {
+                    type string;
+                    orchestrator:advertise onchange;
+                }
+                container a {
+                    leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container b {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            list l {
+                                key l1;
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                container a {
+                                    leaf l1 {
+                                        type int32;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l2 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                }
+                            }
+                        }
+                        container c {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l3 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container a {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                container b {
+                                    leaf l1 {
+                                        type int32;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l2 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    list l {
+                                        key l1;
+                                        leaf l1 {
+                                            type int32;
+                                            orchestrator:advertise onchange;
+                                        }
+                                        leaf l2 {
+                                            type string;
+                                            orchestrator:advertise onchange;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    container c {
+                        leaf l1 {
+                            type int32;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l2 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        leaf l3 {
+                            type string;
+                            orchestrator:advertise onchange;
+                        }
+                        container a {
+                            leaf l1 {
+                                type int32;
+                                orchestrator:advertise onchange;
+                            }
+                            leaf l2 {
+                                type string;
+                                orchestrator:advertise onchange;
+                            }
+                            container b {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                list l {
+                                    key l1;
+                                    leaf l1 {
+                                        type int32;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l2 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                }
+                                container c {
+                                    leaf l1 {
+                                        type int32;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l2 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l3 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                }
+                            }
+                            container c {
+                                leaf l1 {
+                                    type int32;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l2 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                leaf l3 {
+                                    type string;
+                                    orchestrator:advertise onchange;
+                                }
+                                container a {
+                                    leaf l1 {
+                                        type int32;
+                                        orchestrator:advertise onchange;
+                                    }
+                                    leaf l2 {
+                                        type string;
+                                        orchestrator:advertise onchange;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    			}
+    		}
+    	}
+}

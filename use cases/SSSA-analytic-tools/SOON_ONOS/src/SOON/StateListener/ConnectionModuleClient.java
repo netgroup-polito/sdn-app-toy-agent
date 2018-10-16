@@ -1,0 +1,227 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package StateListener;
+
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import org.glassfish.jersey.media.sse.EventListener;
+import org.glassfish.jersey.media.sse.EventSource;
+import org.glassfish.jersey.media.sse.InboundEvent;
+import org.glassfish.jersey.media.sse.SseFeature;
+import org.slf4j.LoggerFactory;
+
+/**
+ *
+ * @author lara
+ */
+public class ConnectionModuleClient {
+    
+    protected final org.slf4j.Logger log = LoggerFactory.getLogger(getClass());
+    
+  //  public static String BASE_URI = "http://130.192.225.154:8080/frogsssa-1.0-SNAPSHOT/webresources/ConnectionModule";
+//    public static final String BASE_URI = "http://192.168.213.131:8080/frogsssa-1.0-SNAPSHOT/webresources/ConnectionModule";
+//    public static String EVENTS_URI = "http://130.192.225.154:8080/frogsssa-1.0-SNAPSHOT/webresources/events";
+    public static String BASE_URI = "http://127.0.0.1:8080/ConnectionModule-1.0-SNAPSHOT/webresources/ConnectionModule";
+//    public static final String BASE_URI = "http://192.168.213.131:8080/frogsssa-1.0-SNAPSHOT/webresources/ConnectionModule";
+    public static String EVENTS_URI = "http://127.0.0.1:8080/ConnectionModule-1.0-SNAPSHOT/webresources/events";
+    public static Client client;
+    public static WebTarget target;
+    public static EventSource eventSource;
+    public static StateListenerNew l;
+    public String id;
+    
+    public long timestamp0; public long timestamp1; public long timestamp2; public long timestamp3;
+
+    public ConnectionModuleClient(StateListenerNew l, String id, String baseUri, String eventsUri){
+        BASE_URI=baseUri;
+        EVENTS_URI=eventsUri;
+      //  log.info("in the constructor of the connmodclient, passed "+BASE_URI+EVENTS_URI);
+        client = ClientBuilder.newBuilder()
+                .register(SseFeature.class)
+                .build();
+        target = client.target(BASE_URI);
+      //  log.info("created target!");
+        this.l = l;
+        this.id = id;
+//        l.log.info("Prima della create request");
+        CreateRequest();
+    }
+    
+    public void setId(String id){
+        this.id = id;
+    }
+
+    public void closeSSE(){
+        eventSource.close();
+    }
+    
+    private void startSSE(String id){
+        WebTarget endpoint = client.target(EVENTS_URI).path(id);
+        //WebTarget endpoint;
+        eventSource = EventSource.target(endpoint).build();
+      //  l.log.info("Ho costruito l'eventSource");
+        EventListener listener = new EventListener() {
+            
+            @Override
+            public void onEvent(InboundEvent ie) {
+//                System.out.println("received SSE");
+                //try {
+                   // System.out.println(ie.getName() + " data is " +ie.readData());
+                        l.log.info("++Received SSE data "+ie.readData());
+                        timestamp0 = System.nanoTime();//.currentTimeMillis();
+                       // l.log.info("++timestamp0 "+timestamp0);
+                try {
+                    //l.setVariable("id4", ie.readData());
+                    //split and set commands
+                    l.parseCommand(ie.readData());
+                    timestamp1 = System.nanoTime();//.currentTimeMillis();
+                    //l.log.info("++timestamp1-0 "+(timestamp1-timestamp0));
+ 
+                    /*} catch (IOException ex) {
+                    Logger.getLogger(ConnectionModuleClient.class.getName()).log(Level.SEVERE, null, ex);
+                    System.err.println("Closing the channel in the client");
+                    }*/
+                } catch (IllegalArgumentException ex) {
+                    Logger.getLogger(ConnectionModuleClient.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (NoSuchFieldException ex) {
+                    Logger.getLogger(ConnectionModuleClient.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IllegalAccessException ex) {
+                    Logger.getLogger(ConnectionModuleClient.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(ConnectionModuleClient.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }  
+        };
+        eventSource.register(listener);
+        eventSource.open();
+    }
+    
+    public static String GETResourcesRequest(){
+        String res;
+        Response cr = target.request().accept("application/xml").get(Response.class);
+        if(cr.getStatus()!=200){
+            //System.out.println("Error in the get");
+            return "Error";
+        }
+        res = cr.getEntity().toString();
+        return res;
+    }
+    
+    public void setResourceValue(String msg){
+        
+        long time00 = System.nanoTime();//.currentTimeMillis();
+        
+                
+       // l.log.info("Passo al web service il valore "+msg);
+        Response r = target.path(id.toString()).path("response").request().post(Entity.entity(msg, MediaType.TEXT_PLAIN), Response.class);
+        
+        long time0 = System.nanoTime();//.currentTimeMillis();
+        //log.info("++time00-0 "+(time00-time0));
+        
+        //timestamp2 = System.currentTimeMillis();
+        //l.log.info("++timestamp2-0 "+(timestamp2-timestamp0));
+        
+        if(r.getStatus()!=204){
+           // l.log.info("!!Error in the passage of a requested value "+r.getStatus());
+        }
+    }
+    
+    
+    public String CreateRequest(){
+        String res;
+//        l.log.info("!!-------*******Prima di mandare la create******-------!!!!");
+       
+        Response cr = target.path("create").request().post(Entity.entity(id, MediaType.TEXT_PLAIN), Response.class);
+        //System.out.println("Sent request "+cr.getStatus()+cr.getStatusInfo());
+//        l.log.info("ho mandalo la richiesta, prima dello startSSE "+cr.getStatus());
+//        if(cr.getStatus()!=200 && cr.getStatus()!=204){
+//            System.out.println("Error in the post");
+//            System.out.println(cr.getStatus());
+//            return "Error";
+//        }
+    
+        //res = cr.getEntity().toString();
+        startSSE(id);
+        return id;
+    }
+    
+    public void SetDataModel(String input){
+       // l.log.info("Setting DM");
+        Response cr = target.path(id).path("dataModel").request().post(Entity.entity(input, MediaType.TEXT_PLAIN), Response.class);
+        if(cr.getStatus()!=204){
+           // System.out.println("Error in the post");
+          //  System.out.println(cr.getStatus());
+        }
+      //  l.log.info(cr.getStatusInfo().toString());
+    }
+    
+//    public boolean SetVariableCorrispondence(String x, String c){
+//        String input = c;
+//        Response cr = target.path(id.toString()).path(x).path("DM").request().post(Entity.entity(input, MediaType.TEXT_PLAIN), Response.class);
+//        if(cr.getStatus()!=200){
+//            System.out.println("Error in the post" + cr.getStatus());
+//            return false;
+//        }
+//        if(cr.getEntity().toString().equals("true"))
+//            return true;
+//        else
+//            return false;
+//    }
+//    
+        public void somethingChanged(String m){
+        
+        Response cr = target.path(id.toString()).path("change").request().post(Entity.entity(m, MediaType.APPLICATION_JSON), Response.class);
+        //System.out.println("change posted, response: "+cr.getStatus());
+        //SetVariableValue(s, o);
+        }
+    
+//    public boolean SetVariableValue(String x, Object v){
+//        //trasform object in json or xml!
+//        String input = (new Gson()).toJson(v);
+//        Response cr = target.path(id.toString()).path(x).path("Value").request().post(Entity.entity(input, MediaType.TEXT_PLAIN), Response.class);
+//        if(cr.getStatus()!=200){
+//            System.out.println("Error in the post" + cr.getStatus());
+//            return false;
+//        }
+//        if(cr.getEntity().toString().equals("true"))
+//            return true;
+//        else
+//            return false;
+//    }
+    
+    public static String getResource(String id){
+        Response cr = target.path(id).request().accept(MediaType.APPLICATION_XML).get(Response.class);
+        if(cr.getStatus()!=200){
+            //System.out.println("Error in the get " + cr.getStatus());
+            return null;
+        }
+        //to trasform in Resource
+        return cr.getEntity().toString();
+    }
+    
+    public static int getCount(){
+        Response cr = target.path("count").request().accept(MediaType.TEXT_PLAIN).get(Response.class);
+        if(cr.getStatus()!=200){
+            //System.out.println("Error in the get " + cr.getStatus());
+            return 0;
+        }
+        return Integer.parseInt(cr.getEntity().toString());
+    }
+    
+    public void deleteResources(){
+        Response cr = target.path(id).request().delete();
+        if(cr.getStatus()!=200){
+            //System.out.println("Error in the delete " + cr.getStatusInfo());
+        }
+    }
+}

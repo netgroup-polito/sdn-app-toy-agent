@@ -1,0 +1,62 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/lib/jdeb-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/org.easymock-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/slf4j-api-1.6.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/javax.inject-2.5.0-b32.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/javax.annotation-api-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/javassist-3.20.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/cglib-nodep-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/args4j-2.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/derby-10.9.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/org.restlet.ext.jackson-2.2M3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/log4j-1.2.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jackson-core-2.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/hk2-api-2.5.0-b32.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/org.restlet.ext.simple-2.2M3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/json-simple-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/httpclient-4.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/gson-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jackson-databind-2.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/simple-5.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/packetstreamer-thrift.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jersey-common-2.25.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/junit-4.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/findbugs-jsr305-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/asm-tree-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/hk2-utils-2.5.0-b32.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jackson-dataformat-yaml-2.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jython-2.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/findbugs-annotations-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/hk2-locator-2.5.0-b32.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/javax.ws.rs-api-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jackson-dataformat-smile-2.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jackson-annotations-2.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/aopalliance-repackaged-2.5.0-b32.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/objenesis-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/cobertura-1.9.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jersey-media-sse-2.25.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/httpcore-4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/netty-3.2.6.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/logback-core-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/org.restlet-2.2M3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/asm-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jersey-guava-2.25.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jersey-client-2.25.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/org.restlet.ext.slf4j-2.2M3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jackson-dataformat-csv-2.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/osgi-resource-locator-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/guava-13.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jackson-dataformat-xml-2.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/libthrift-0.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/sunxacml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/concurrentlinkedhashmap-lru-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/java-json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/logback-classic-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

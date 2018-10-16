@@ -1,0 +1,28 @@
+<Request>
+<Subject>
+<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:reputation" DataType="http://www.w3.org/2001/XMLSchema#integer">
+<AttributeValue>0</AttributeValue>
+</Attribute>
+<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:wrp" DataType="http://www.w3.org/2001/XMLSchema#integer">
+<AttributeValue>0</AttributeValue>
+</Attribute>
+<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:conformance-test:rk" DataType="http://www.w3.org/2001/XMLSchema#integer">
+<AttributeValue>0</AttributeValue>
+</Attribute>
+</Subject>
+<Resource>
+<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#string">
+<AttributeValue>Path_Computation</AttributeValue>
+</Attribute>
+</Resource>
+<Action>
+<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string">
+<AttributeValue>compute</AttributeValue>
+</Attribute>
+</Action>
+<Environment/>
+</Request>
+
+
+
+

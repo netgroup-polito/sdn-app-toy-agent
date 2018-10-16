@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SwitchMBoxes>
+<SwitchMBox outPort="4" port="3" switch="21" vlid="10"/>
+<SwitchMBox outPort="4" port="3" switch="8" vlid="11"/>
+<SwitchMBox outPort="4" port="3" switch="20" vlid="12"/>
+<SwitchMBox outPort="4" port="3" switch="22" vlid="13"/>
+<SwitchMBox outPort="4" port="3" switch="17" vlid="14"/>
+<SwitchMBox outPort="4" port="3" switch="10" vlid="15"/>
+<SwitchMBox outPort="4" port="3" switch="18" vlid="16"/>
+<SwitchMBox outPort="4" port="3" switch="5" vlid="17"/>
+<SwitchMBox outPort="4" port="3" switch="13" vlid="18"/>
+<SwitchMBox outPort="4" port="3" switch="3" vlid="19"/>
+<SwitchMBox outPort="4" port="3" switch="19" vlid="20"/>
+<SwitchMBox outPort="4" port="3" switch="22" vlid="30"/>
+<SwitchMBox outPort="4" port="3" switch="19" vlid="31"/>
+<SwitchMBox outPort="4" port="3" switch="20" vlid="32"/>
+<SwitchMBox outPort="4" port="3" switch="13" vlid="33"/>
+<SwitchMBox outPort="4" port="3" switch="8" vlid="34"/>
+<SwitchMBox outPort="4" port="3" switch="5" vlid="35"/>
+<SwitchMBox outPort="4" port="3" switch="3" vlid="36"/>
+<SwitchMBox outPort="4" port="3" switch="21" vlid="37"/>
+<SwitchMBox outPort="4" port="3" switch="10" vlid="38"/>
+<SwitchMBox outPort="4" port="3" switch="17" vlid="39"/>
+<SwitchMBox outPort="4" port="3" switch="18" vlid="40"/>
+<SwitchMBox outPort="4" port="3" switch="19" vlid="50"/>
+<SwitchMBox outPort="4" port="3" switch="10" vlid="51"/>
+<SwitchMBox outPort="4" port="3" switch="21" vlid="52"/>
+<SwitchMBox outPort="4" port="3" switch="3" vlid="53"/>
+<SwitchMBox outPort="4" port="3" switch="18" vlid="54"/>
+<SwitchMBox outPort="4" port="3" switch="5" vlid="55"/>
+<SwitchMBox outPort="4" port="3" switch="22" vlid="56"/>
+<SwitchMBox outPort="4" port="3" switch="8" vlid="57"/>
+<SwitchMBox outPort="4" port="3" switch="20" vlid="58"/>
+<SwitchMBox outPort="4" port="3" switch="17" vlid="59"/>
+<SwitchMBox outPort="4" port="3" switch="13" vlid="60"/>
+</SwitchMBoxes>

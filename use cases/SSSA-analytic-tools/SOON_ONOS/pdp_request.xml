@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PDP_req>
+  <domain_id>1</domain_id> <!--PCC Id-->
+  <req_id>1</req_id>
+  <src>193.205.83.101</src>
+  <dst>217.9.70.110</dst>
+  <tr_egr>1</tr_egr>
+  <bidir>0</bidir>
+  <BRPC>0</BRPC>
+  <bw>500</bw>
+  <local_prot>1</local_prot>
+  <metric>0</metric>
+  <SVEC>
+    <link>0</link>
+    <node>0</node>
+    <SRLG>0</SRLG>
+  </SVEC>
+</PDP_req>

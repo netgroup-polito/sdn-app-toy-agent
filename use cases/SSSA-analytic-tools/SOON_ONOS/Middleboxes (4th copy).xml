@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Middleboxes>
+<Middlebox vlid="10" service="s1"/>
+<Middlebox vlid="11" service="s1"/>
+<Middlebox vlid="12" service="s1"/>
+<Middlebox vlid="13" service="s2"/>
+<Middlebox vlid="14" service="s2"/>
+<Middlebox vlid="15" service="s2"/>
+<Middlebox vlid="16" service="s3"/>
+<Middlebox vlid="17" service="s3"/>
+<Middlebox vlid="18" service="s3"/>
+</Middleboxes>

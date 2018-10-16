@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Instances>
+<Instance vlid="10" service="s1"/>
+<Instance vlid="11" service="s2"/>
+<Instance vlid="12" service="s3"/>
+
+<Instance vlid="13" service="s1"/>
+<Instance vlid="14" service="s2"/>
+<Instance vlid="15" service="s3"/>
+
+</Instances>

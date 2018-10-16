@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<FlowSetupReply>
+<Response dst="10.0.0.1" iteration="1_" requestID="10" serviceTime="500.0" src="10.0.0.4" startTime="1.500295008562E12">
+<Request>
+<Path>
+<srcIP>10.0.0.4</srcIP>
+<dstIP>10.0.0.1</dstIP>
+<direction>forward</direction>
+<Segment>
+<Node>
+<inPort>7</inPort>
+<outPort>1</outPort>
+<vlan_match>0</vlan_match>
+<switch>1</switch>
+</Node>
+<Node>
+<inPort>1</inPort>
+<outPort>2</outPort>
+<vlan_match>0</vlan_match>
+<switch>4</switch>
+</Node>
+</Segment>
+</Path>
+<Path>
+<srcIP>10.0.0.1</srcIP>
+<dstIP>10.0.0.4</dstIP>
+<direction>backward</direction>
+<Segment>
+<Node>
+<inPort>2</inPort>
+<outPort>1</outPort>
+<vlan_match>0</vlan_match>
+<switch>4</switch>
+</Node>
+<Node>
+<inPort>1</inPort>
+<outPort>7</outPort>
+<vlan_match>0</vlan_match>
+<switch>1</switch>
+</Node>
+</Segment>
+</Path>
+</Request>Service delivery sucessful!</Response>
+</FlowSetupReply>

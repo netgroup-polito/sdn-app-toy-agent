@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Mapping>
+<SAP id="SAP1" srcIp="10.0.1.1"/>
+<SAP id="SAP2" srcIp="10.0.4.1"/>
+<SAP id="SAP3" srcIp="10.0.10.1" />
+<SAP id="SAP4" srcIp="10.0.11.1" />
+</Mapping>

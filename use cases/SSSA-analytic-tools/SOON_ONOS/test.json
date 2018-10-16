@@ -1,0 +1,11 @@
+"treatment": {
+"instructions": [
+{
+ "type": "HostToHostIntent",
+ "id": "0x12",
+ "key": "0x12",
+ "appId": "org.onosproject.cli", 
+ "one":"00:00:00:00:00:02/None",
+ "two":"00:00:00:00:00:0D/None"}
+]
+}

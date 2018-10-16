@@ -1,0 +1,24 @@
+{
+  "paths": [
+    {
+      "links": [
+        {
+          "dst": {
+            "device": "of:0000000000000008",
+            "port": "2"
+          },
+ 	  "src": {
+            "device": "of:0000000000000002",
+	    "port": "3"
+          },
+          "type": "DIRECT",
+          "state": "ACTIVE"
+        }
+      ]
+    }
+  ]
+}
+
+
+
+

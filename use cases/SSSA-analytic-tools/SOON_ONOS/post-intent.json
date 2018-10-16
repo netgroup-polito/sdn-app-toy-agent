@@ -1,0 +1,23 @@
+{
+  "type": "HostToHostIntent",
+  "appId": "myApp",
+  "selector": {
+    "criteria": [
+      {
+        "type": "ETH_DST",
+        "mac": "00:00:00:00:00:06"
+      }
+    ]
+  },
+  "treatment": {
+    "instructions": [
+      {
+        "type": "L2MODIFICATION",
+        "subtype": "ETH_SRC",
+        "mac": "00:00:00:00:00:01"
+      }
+    ],
+    "deferred": []
+  },
+  "priority": 55,
+}

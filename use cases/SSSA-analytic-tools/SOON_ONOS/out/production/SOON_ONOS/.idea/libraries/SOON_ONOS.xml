@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="SOON_ONOS">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/http.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bns.jar!/" />
+      <root url="jar://$PROJECT_DIR$/onos-app-ifwd-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sunxacml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/httpcore-4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/httpclient-4.2.5.jar.zip!/" />
+      <root url="jar://$PROJECT_DIR$/httpcore-4.2.jar.zip!/" />
+      <root url="jar://$PROJECT_DIR$/DSE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jsch-0.1.52.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ae.jar!/" />
+      <root url="jar://$PROJECT_DIR$/httpclient-4.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/rest.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

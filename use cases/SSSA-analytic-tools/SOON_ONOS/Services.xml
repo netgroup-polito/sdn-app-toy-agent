@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Services>
+<Service vlid="10" type="FW" />
+<Service vlid="11" type="FW" />
+<Service vlid="12" type="FW" />
+
+<Service vlid="30" type="IDS" />
+<Service vlid="31" type="IDS" />
+<Service vlid="32" type="IDS" />
+
+<Service vlid="50" type="NAT" />
+<Service vlid="51" type="NAT" />
+<Service vlid="52" type="NAT" />
+
+
+</Services>

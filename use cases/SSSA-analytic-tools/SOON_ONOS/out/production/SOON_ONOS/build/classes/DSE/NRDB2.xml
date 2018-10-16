@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<all>
+<DSE address="155.245.64.216" port="5050">
+        <PE address="10.0.0.1">
+            <interface address="fe-0/2/1">
+                <Subnet address="10.20.1.0/24"/>
+            </interface>
+            <interface address="fe-0/2/2">
+                <Subnet address="10.20.2.0/24"/>
+            </interface>
+            <interface address="fxp0">
+                <Subnet address="217.9.70.114/25"/>
+            </interface>
+            <interface address="lo0">
+                <Subnet address="10.0.0.1/32"/>
+            </interface>
+        </PE>
+</DSE>
+<DSE address="155.245.64.217" port="5050">
+        <PE address="20.0.0.1">
+            <interface address="fe-0/3/1">
+                <Subnet address="20.20.1.0/24"/>
+            </interface>
+            <interface address="fe-0/3/2">
+                <Subnet address="20.20.2.0/24"/>
+            </interface>
+            <interface address="fxp0">
+                <Subnet address="217.9.70.113/25"/>
+            </interface>
+            <interface address="lo0">
+                <Subnet address="20.0.0.1/32"/>
+            </interface>
+        </PE>
+</DSE>
+</all>

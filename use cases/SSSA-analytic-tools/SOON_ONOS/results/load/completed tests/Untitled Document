@@ -1,0 +1,75 @@
+100--200
+no-load
+<SwitchMBox outPort="4" port="3" switch="7" vlid="10"/>
+<SwitchMBox outPort="4" port="3" switch="4" vlid="11"/>
+<SwitchMBox outPort="4" port="3" switch="5" vlid="12"/>
+<SwitchMBox outPort="4" port="3" switch="3" vlid="13"/>
+<SwitchMBox outPort="4" port="3" switch="8" vlid="14"/>
+
+sw=1	load(bytes)=363710440
+sw=2	load(bytes)=522617832
+sw=3	load(bytes)=436855580 **
+sw=4	load(bytes)=2013657992 **
+sw=5	load(bytes)=4480419084 **
+sw=6	load(bytes)=495567188
+sw=7	load(bytes)=2882929700 **
+sw=8	load(bytes)=4500852884 *
+sw=9	load(bytes)=598245200
+sw=10	load(bytes)=342214752
+sw=11	load(bytes)=621573564
+
+<SwitchMBox outPort="4" port="3" switch="2" vlid="10"/>
+<SwitchMBox outPort="4" port="3" switch="6" vlid="11"/>
+<SwitchMBox outPort="4" port="3" switch="7" vlid="12"/>
+<SwitchMBox outPort="4" port="3" switch="8" vlid="13"/>
+<SwitchMBox outPort="4" port="3" switch="5" vlid="14"/>
+
+sw=1	load(bytes)=300248472
+sw=2	load(bytes)=1760368616 **
+sw=3	load(bytes)=158145592
+sw=4	load(bytes)=1480567180
+sw=5	load(bytes)=5403191808 **
+sw=6	load(bytes)=3562917024 **
+sw=7	load(bytes)=1569000100 **
+sw=8	load(bytes)=3678400100 **
+sw=9	load(bytes)=1131871632
+sw=10	load(bytes)=721770256
+sw=11	load(bytes)=697283068
+
+load
+switches
+<SwitchMBox outPort="4" port="3" switch="4" vlid="10"/>
+<SwitchMBox outPort="4" port="3" switch="1" vlid="11"/>
+<SwitchMBox outPort="4" port="3" switch="3" vlid="12"/>
+<SwitchMBox outPort="4" port="3" switch="7" vlid="13"/>
+<SwitchMBox outPort="4" port="3" switch="6" vlid="14"/>
+
+sw=1	load(bytes)=4829090168 **
+sw=2	load(bytes)=2316346484
+sw=3	load(bytes)=2241898488 **
+sw=4	load(bytes)=5913329088 **
+sw=5	load(bytes)=2674030876
+sw=6	load(bytes)=1171611044 **
+sw=7	load(bytes)=2309418048 **
+sw=8	load(bytes)=1564184060
+sw=9	load(bytes)=447327728
+sw=10	load(bytes)=144295412
+sw=11	load(bytes)=333264776
+
+<SwitchMBox outPort="4" port="3" switch="5" vlid="10"/>
+<SwitchMBox outPort="4" port="3" switch="3" vlid="11"/>
+<SwitchMBox outPort="4" port="3" switch="10" vlid="12"/>
+<SwitchMBox outPort="4" port="3" switch="6" vlid="13"/>
+<SwitchMBox outPort="4" port="3" switch="9" vlid="14"/>
+
+sw=1	load(bytes)=306771248
+sw=2	load(bytes)=962639276
+sw=3	load(bytes)=429961196 **
+sw=4	load(bytes)=1615270280
+sw=5	load(bytes)=4060157432 **
+sw=6	load(bytes)=5380509420 **
+sw=7	load(bytes)=178498044
+sw=8	load(bytes)=734594308
+sw=9	load(bytes)=4740458500 **
+sw=10	load(bytes)=1707212352 **
+sw=11	load(bytes)=404186648
