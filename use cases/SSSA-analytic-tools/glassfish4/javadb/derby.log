@@ -1,0 +1,14 @@
+Wed Oct 03 17:49:48 CEST 2018 : Server di rete Apache Derby: 10.10.2.0 - (1582446) avviato e pronto ad accettare connessioni sulla porta 1527
+----------------------------------------------------------------
+Wed Oct 03 17:49:59 CEST 2018:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): istanza a816c00e-0166-3a9e-f8b7-ffffeeb4ddb2
+sulla directory di database /home/gabriele/Applications/glassfish4/javadb/sun-appserv-samples con caricatore classi sun.misc.Launcher$AppClassLoader@610455d6 
+Caricato da file:/home/gabriele/Applications/glassfish4/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=/home/gabriele/Applications/glassfish4/javadb
+os.name=Linux
+os.arch=amd64
+os.version=4.14.0-3-amd64
+derby.system.home=/home/gabriele/Applications/glassfish4/javadb
+Programma di caricamento classe database avviato - derby.database.classpath=''

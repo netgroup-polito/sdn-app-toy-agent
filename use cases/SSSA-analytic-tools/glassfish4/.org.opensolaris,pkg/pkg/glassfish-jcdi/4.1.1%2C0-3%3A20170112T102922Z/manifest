@@ -1,0 +1,18 @@
+set name=fmri value=pkg:/glassfish-jcdi@4.1.1,0-3:20170112T102922Z
+set name=info.classification value="Application Servers"
+set name=pkg.description value="Java Contexts and Dependency Injection (JCDI) specifies services for the Java EE platform.  It layers an enhanced lifecycle and interaction model over existing Java component types including Java Beans and Enterprise Java Beans.  JCDI also enables transactional components such as Enterprise Java Beans to participate in the presentation tier of web frameworks. GlassFish Server is a modular and lightweight Java EE 7 compliant application server. Key features include an OSGi runtime, fast startup time, maven support, and rapid iterative development with Active Redeploy.  GlassFish Server also offers feature-rich administration with the web console, command line, and RESTful API."
+set name=pkg.summary value="GlassFish JCDI"
+depend fmri=pkg:/glassfish-common type=require
+license 8741fa556feea4ca58ec28abc47de0bf9d5b39a3 chash=28b7cfba8f297b99296afc231955dc90e8d76d47 license="CDDL and GPL v2 with classpath exception" pkg.csize=12394 pkg.size=38052
+dir group=sys mode=0755 owner=root path=glassfish
+dir group=sys mode=0755 owner=root path=glassfish/modules
+file 56ec7cdb2d4eccec57768a531f68b6b82fafe2d7 chash=cc2af4db0b905f0e6b09a431bb9845b1fed560fe group=sys mode=0644 owner=root path=glassfish/modules/bean-validator-cdi.jar pkg.csize=31832 pkg.size=37541
+file f46d08a56a554a0a7cce703ea1177b1b7c5c832c chash=19b9efcd1175f09ef0108e0e36a4716137dbce27 group=sys mode=0644 owner=root path=glassfish/modules/cdi-api-fragment.jar pkg.csize=2461 pkg.size=3384
+file 8a7af0f8c4e6856041b00b75a75a4de3f37263e5 chash=229875cb7c834420135fe6ceeff00d5244ea8a0b group=sys mode=0644 owner=root path=glassfish/modules/weld-integration.jar pkg.csize=137133 pkg.size=150003
+file d15e625d595f64d7b1be832b9c6e1dd0021fab95 chash=708c89b0a143a2be138b9558045d98a4a5ff8268 group=sys mode=0644 owner=root path=glassfish/modules/weld-integration-fragment.jar pkg.csize=3161 pkg.size=3915
+file 813220de9bfc816732fec64bcad585e7a6e2cc77 chash=6a67b528f0f00b5390b625cd4e10fe79bd76d177 group=sys mode=0644 owner=root path=glassfish/modules/gf-weld-connector.jar pkg.csize=16906 pkg.size=19398
+file b000b767cb80b4acb4f37361254956d9de115fe3 chash=47b1494a9356f4ecacec1320464c469da1fb54a7 group=sys mode=0644 owner=root path=glassfish/modules/weld-osgi-bundle.jar pkg.csize=1524420 pkg.size=1716679
+file a71bab408ecb5edcd007a7deca4c0f4fcc7bcda2 chash=3e278878521b595a1541dff9d9f971a539e9caab group=sys mode=0644 owner=root path=glassfish/modules/cdi-api.jar pkg.csize=55807 pkg.size=70697
+file 1cdd278fcbe178c5baab5dc1b0da79148e4132c9 chash=b89fa8a0930013f28cc9d61ca51d6501decb72a1 group=sys mode=0644 owner=root path=glassfish/modules/guava.jar pkg.csize=1669567 pkg.size=1866827
+file 272a8fd77f64bba19e61a787bf7b1f229226bc54 chash=59d8e62d02fde5b11aff00fb3123f88fa7e18cf1 group=sys mode=0644 owner=root path=glassfish/modules/jboss-logging.jar pkg.csize=50566 pkg.size=56665
+set name=publisher value=release.glassfish.org

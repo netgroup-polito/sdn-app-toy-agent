@@ -1,0 +1,15 @@
+set name=fmri value=pkg:/glassfish-ejb-lite@4.1.1,0-3:20170112T102650Z
+set name=info.classification value="Application Servers"
+set name=pkg.description value="EJB 3.1 Lite is a lightweight subset of EJB 3.1 that includes support for local session beans (stateful / stateless / singleton) and .war-based packaging/deployment.  GlassFish Server is a modular and lightweight Java EE 7 compliant application server. Key features include an OSGi runtime, fast startup time, maven support, and rapid iterative development with Active Redeploy.  GlassFish Server also offers feature-rich administration with the web console, command line, and RESTful API."
+set name=pkg.summary value="GlassFish EJB Lite Container"
+depend fmri=pkg:/glassfish-common type=require
+depend fmri=pkg:/glassfish-jpa type=require
+license 8741fa556feea4ca58ec28abc47de0bf9d5b39a3 chash=28b7cfba8f297b99296afc231955dc90e8d76d47 license="CDDL and GPL v2 with classpath exception" pkg.csize=12394 pkg.size=38052
+dir group=sys mode=0755 owner=root path=glassfish
+dir group=sys mode=0755 owner=root path=glassfish/modules
+file d36143c85122e0d15c5c4040c7aaeb5415fa734a chash=0172844780a57b9e332ce42e443c8ee2a28e515f group=sys mode=0644 owner=root path=glassfish/modules/gf-ejb-connector.jar pkg.csize=15778 pkg.size=19232
+file 0afa19685cab3f10a1366dcab915684421b425ef chash=5ecadc9dea0d65d9998245715b589cf544fe01c0 group=sys mode=0644 owner=root path=glassfish/modules/ejb-client.jar pkg.csize=8778 pkg.size=10337
+file 8ad71afc1e0b45a796c8e062462410101b5d69b9 chash=2e41560a93267ff061ed4e2efe68f691254a8076 group=sys mode=0644 owner=root path=glassfish/modules/ejb-container.jar pkg.csize=859223 pkg.size=919419
+file 458cc93dcbc2108a740d02c540e5b3ae09c8e18a chash=f3b5a819a8d32c87d51e952313f58d966fa722b9 group=sys mode=0644 owner=root path=glassfish/modules/console-ejb-lite-plugin.jar pkg.csize=26993 pkg.size=31278
+file d439670f3ab603d334efbb92fa8c60e364848ec6 chash=6a627f76b03060d16fd333844769e38d5ea5f673 group=sys mode=0644 owner=root path=glassfish/modules/javaee-kernel.jar pkg.csize=16787 pkg.size=19292
+set name=publisher value=release.glassfish.org

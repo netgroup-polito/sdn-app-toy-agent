@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="org.onosproject.sampleapp.AppComponent" activate="activate" deactivate="deactivate">
+    <implementation class="org.onosproject.sampleapp.AppComponent"/>
+    <service servicefactory="false">
+        <provide interface="org.onosproject.sampleapp.AppComponentService"/>
+    </service>
+    <property name="service.pid" value="org.onosproject.sampleapp.AppComponent"/>
+    <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+    <reference name="configRegistry" interface="org.onosproject.net.config.NetworkConfigRegistry" cardinality="1..1" policy="static" bind="bindConfigRegistry" unbind="unbindConfigRegistry"/>
+    <reference name="configService" interface="org.onosproject.net.config.NetworkConfigService" cardinality="1..1" policy="static" bind="bindConfigService" unbind="unbindConfigService"/>
+</scr:component>
